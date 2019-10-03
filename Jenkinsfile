@@ -1,5 +1,5 @@
 node('master') {
- withMaven() {
+ withMaven(maven:'M3') {
   stage('Checkout') {
    git url: 'https://github.com/piomin/sample-spring-cloud-comm.git', credentialsId: 'github-piomin',   branch: 'feign_with_discovery'
   }
